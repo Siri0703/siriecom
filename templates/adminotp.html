@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* General Styles for OTP Page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ad8282;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 40px;
+    background-color: #7ea9e2;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #b9b793;
+    color: rgb(17, 10, 10);
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.flash-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+input[type="text"] {
+    text-align: center;
+}
+
+input.otp-input {
+    width: 30px;
+    font-size: 20px;
+    text-align: center;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input.otp-input:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+/* OTP Container Styling */
+.otp-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.otp-container input {
+    margin: 0 5px;
+}
+
+
+.otp-instructions {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+    color: #555;
+}
+
+
+/* Error/Success Flash Styling */
+.flash-message {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+    </style>
+</head>
+<body>
+    <h2>Verify OTP</h2>
+    <form method="POST">
+        <label for="otp">OTP:</label>
+        <input type="text" name="otp" id="otp" required><br><br>
+
+        <button type="submit">Verify OTP</button>
+    </form>
+</body>
+</html>
